@@ -15,6 +15,59 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
+
+    <style>
+      /* Featured project row - más grande */
+      .projects__row--featured {
+        background: #e2e2e2;
+        grid-template-columns: 1.8fr 1fr;
+        margin-bottom: 11rem;
+        border-left: 5px solid #ca0101;
+      }
+      .projects__row--featured .projects__row-img {
+        max-height: 500px;
+      }
+      .projects__row--featured .projects__row-content-title {
+        font-size: 3.4rem;
+      }
+      .projects__row--featured .projects__row-content-desc {
+        font-size: 1.9rem;
+      }
+
+      /* Etiqueta "Destacado" */
+      .projects__row--featured .projects__row-content::before {
+        content: '★ Proyecto Destacado';
+        display: inline-block;
+        background: #ca0101;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 0.4rem 1.2rem;
+        border-radius: 3px;
+        margin-bottom: 1.5rem;
+      }
+
+      /* Botones en fila */
+      .projects__row-btns {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      @media only screen and (max-width: 56.25em) {
+        .projects__row--featured {
+          grid-template-columns: 1fr;
+        }
+        .projects__row--featured .projects__row-content-title {
+          font-size: 2.8rem;
+        }
+        .projects__row-btns {
+          justify-content: center;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="header">
@@ -66,15 +119,12 @@
             <li class="header__sm-menu-link">
               <a href="./index.html"> Home </a>
             </li>
-
             <li class="header__sm-menu-link">
               <a href="./index.html#about"> About </a>
             </li>
-
             <li class="header__sm-menu-link">
               <a href="./index.html#projects"> Projects </a>
             </li>
-
             <li class="header__sm-menu-link">
               <a href="./index.html#contact"> Contact </a>
             </li>
@@ -82,6 +132,7 @@
         </div>
       </div>
     </header>
+
     <section class="home-hero">
       <div class="home-hero__content">
         <h1 class="heading-primary">Buenas, soy Nicolás Andrés Hermán</h1>
@@ -93,14 +144,14 @@
           </p>
         </div>
         <div class="home-hero__cta">
-          <a href="./#projects" class="btn btn--bg">Projectos</a>
+          <a href="./#projects" class="btn btn--bg">Proyectos</a>
         </div>
       </div>
-      
       <div class="home-hero__mouse-scroll-cont">
         <div class="mouse"></div>
       </div>
     </section>
+
     <section id="about" class="about sec-pad">
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med">
@@ -126,16 +177,14 @@
                 <strong>contactar </strong> conmigo aqui.
               </p>
             </div>
-            <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
-              >Contacto</a
-            >
+            <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr">Contacto</a>
           </div>
           <div class="about__content-skills">
             <h3 class="about__content-title">Mis Skills</h3>
             <div class="skills">
               <div class="skills__skill">Ingles</div>
-              <div class="skills__skill">HTML </div>
-              <div class="skills__skill">C# </div>
+              <div class="skills__skill">HTML</div>
+              <div class="skills__skill">C#</div>
               <div class="skills__skill">C++</div>
               <div class="skills__skill">Unity</div>
               <div class="skills__skill">Unreal Engine</div>
@@ -146,6 +195,7 @@
         </div>
       </div>
     </section>
+
     <section id="projects" class="projects sec-pad">
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-bg">
@@ -156,81 +206,13 @@
         </h2>
 
         <div class="projects__content">
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets\png\killimage.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Kill.exe</h3>
-              <p class="projects__row-content-desc">
-                Kill.exe es un rogelike en 2D creado en Unity usando C#, dentro del equipo de programacion
-                mi labor se centro en el Menu de <strong>Opciones</strong>, El <strong>Movimiento</strong>, El <strong>Inventario / Pausar</strong> y el Sistema de <strong>Cambio de Armas Activas</strong>
-              </p>
-              <a
-                href="https://logstormgames.itch.io/killexe"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >Ir a itch.io</a
-              >
-            </div>
-          </div>
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/png/makeit.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Will I Make It</h3>
-              <p class="projects__row-content-desc">
-                Este fue nuestro primer proyecto usando <strong>Unity</strong>, siendo dos programadores mi trabajo fue
-                El nivel de <strong>Arreglar el ordenador</strong>, el nivel de <strong>Bailar con aliens</strong>,
-                el nivel de <strong>Picar metal</strong> y el nivel de <strong>Sacar petroleo</strong>.
-              </p>
-              <a
-                href="https://goodbye-games.itch.io/will-i-make-it"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >Ir a itch.io</a
-              >
-            </div>
-          </div>
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/png/savingJungle.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Saving da Jungle</h3>
-              <p class="projects__row-content-desc">
-                Mi primer proyecto, construido en <strong>Construct 3</strong>, un juego de plataformas en 2D,
-                en este proyecto me encargue de <strong>toda la programacion</strong>.
-              </p>
-              <a
-                href="https://salocinhd.itch.io/saving-da-jungle"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >Ir a itch.io</a
-              >
-            </div>
-          </div>
-          <div class="projects__row">
+
+          <!-- UMBRAL ORDER — Destacado, primero y más grande -->
+          <div class="projects__row projects__row--featured">
             <div class="projects__row-img-cont">
               <img
                 src="./assets/png/UO.png"
-                alt="Software Screenshot"
+                alt="Umbral Order Screenshot"
                 class="projects__row-img"
                 loading="lazy"
               />
@@ -238,21 +220,127 @@
             <div class="projects__row-content">
               <h3 class="projects__row-content-title">Umbral Order</h3>
               <p class="projects__row-content-desc">
-                Este es el proyecto que estamos desarroyando este año en <strong>Unreal Engine</strong>,
-                Mi rol en el proyecto es la Programacion principal como el personaje o la programacion de
-                los <strong> Puzles </strong> y las <strong>Mecanicas/Entornos</strong>.
+                Este es el proyecto que estamos desarrollando este año en <strong>Unreal Engine</strong>.
+                Mi rol en el proyecto es la Programación principal: el personaje, la programación de
+                los <strong>Puzles</strong> y las <strong>Mecánicas/Entornos</strong>.
               </p>
-              <a
-                href="https://salocinhd.itch.io/umbral-order"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >Ir a itch.io</a
-              >
+              <div class="projects__row-btns">
+                <a
+                  href="./project-umbral-order.html"
+                  class="btn btn--med btn--theme dynamicBgClr"
+                  >Ver proyecto</a
+                >
+                <a
+                  href="https://salocinhd.itch.io/umbral-order"
+                  class="btn btn--med btn--theme-inv"
+                  target="_blank"
+                  >Ir a itch.io</a
+                >
+              </div>
             </div>
           </div>
+
+          <!-- KILL.EXE -->
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/png/killimage.png"
+                alt="Kill.exe Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Kill.exe</h3>
+              <p class="projects__row-content-desc">
+                Kill.exe es un rogelike en 2D creado en Unity usando C#. Dentro del equipo de programacion
+                mi labor se centró en el Menu de <strong>Opciones</strong>, el <strong>Movimiento</strong>, el <strong>Inventario / Pausar</strong> y el Sistema de <strong>Cambio de Armas Activas</strong>.
+              </p>
+              <div class="projects__row-btns">
+                <a
+                  href="./project-killexe.html"
+                  class="btn btn--med btn--theme dynamicBgClr"
+                  >Ver proyecto</a
+                >
+                <a
+                  href="https://logstormgames.itch.io/killexe"
+                  class="btn btn--med btn--theme-inv"
+                  target="_blank"
+                  >Ir a itch.io</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- WILL I MAKE IT -->
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/png/makeit.png"
+                alt="Will I Make It Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Will I Make It</h3>
+              <p class="projects__row-content-desc">
+                Este fue nuestro primer proyecto usando <strong>Unity</strong>. Siendo dos programadores, mi trabajo fue
+                el nivel de <strong>Arreglar el ordenador</strong>, el nivel de <strong>Bailar con aliens</strong>,
+                el nivel de <strong>Picar metal</strong> y el nivel de <strong>Sacar petroleo</strong>.
+              </p>
+              <div class="projects__row-btns">
+                <a
+                  href="./project-will-i-make-it.html"
+                  class="btn btn--med btn--theme dynamicBgClr"
+                  >Ver proyecto</a
+                >
+                <a
+                  href="https://goodbye-games.itch.io/will-i-make-it"
+                  class="btn btn--med btn--theme-inv"
+                  target="_blank"
+                  >Ir a itch.io</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- SAVING DA JUNGLE -->
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/png/savingJungle.png"
+                alt="Saving da Jungle Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Saving da Jungle</h3>
+              <p class="projects__row-content-desc">
+                Mi primer proyecto, construido en <strong>Construct 3</strong>, un juego de plataformas en 2D.
+                En este proyecto me encargué de <strong>toda la programación</strong>.
+              </p>
+              <div class="projects__row-btns">
+                <a
+                  href="./project-saving-da-jungle.html"
+                  class="btn btn--med btn--theme dynamicBgClr"
+                  >Ver proyecto</a
+                >
+                <a
+                  href="https://salocinhd.itch.io/saving-da-jungle"
+                  class="btn btn--med btn--theme-inv"
+                  target="_blank"
+                  >Ir a itch.io</a
+                >
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
+
     <section id="contact" class="contact sec-pad dynamicBg">
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med">
@@ -304,6 +392,7 @@
         </div>
       </div>
     </section>
+
     <footer class="main-footer">
       <div class="main-container">
         <div class="main-footer__upper">
@@ -313,29 +402,20 @@
             </h2>
             <div class="main-footer__social-cont">
               <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/nicolás-andrés-hermán-79b952309/">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/linkedin-ico.png"
-                  alt="icon"
-                />
+                <img class="main-footer__icon" src="./assets/png/linkedin-ico.png" alt="icon" />
               </a>
               <a target="_blank" rel="noreferrer" href="https://github.com/SalocinHD">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/github-ico.png"
-                  alt="icon"
-                />
+                <img class="main-footer__icon" src="./assets/png/github-ico.png" alt="icon" />
               </a>
             </div>
           </div>
           <div class="main-footer__row main-footer__row-2">
             <h4 class="heading heading-sm text-lt">Nicolas Andres</h4>
             <p class="main-footer__short-desc">
-              Muchas gracias por ver asta el final, un cordial saludo.
+              Muchas gracias por ver hasta el final, un cordial saludo.
             </p>
           </div>
         </div>
-
       </div>
     </footer>
 
